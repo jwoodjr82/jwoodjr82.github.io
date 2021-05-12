@@ -1,9 +1,303 @@
+<!DOCTYPE html>
 <html>
- 
-<body>
-  <h1>Joseph Wood</h1>
-  <p>Welcome to my first Github website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
- 
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Group Project</title>
+        <link rel = "stylesheet" type = "text/css"
+            href = "stylesheet.css">
+            <!--Latest compiled and minified CSS -->
+            <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <!--Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body>
+        <!--Navigation Bar -->
+        <div class="menu-header">
+                <nav>
+                <a href="#genres">Genres</a>
+                <a href="#top-songs">Songs</a>
+                <a href="#top-artists">Artists</a>
+                <a href="#about">About</a>
+                <a href="#home">Home</a>
+            </nav></div>
+
+            <!--Home Section -->
+            <div class="container-home">
+                <div id = "home">
+                    <br>   
+        <h1>Pathway</h1>
+        <br>
+
+        <div class="home-photo">
+            <img src="./photos/pathwayhome.jpeg" class="center-photo">
+        </div></div></div> 
+        <br><br>
+
+        <!--About Us Section -->
+        <div class="container-about">
+            <div id = "about">
+                <br>
+        <h3 class="about-header">About Us</h3>
+        <br><br><br>
+        <p>We are a group of individuals that attend San Jose State University and we each have a passion for music. We made this website for our Web-Based Computing class and were able to choose any topic we wanted. 
+            Pathway was made by music lovers for music lovers in hopes to educate, inform, and entertain our audience. It’s main identity is a place for other people that are also passionate about music or would like to learn more about music. 
+            They will be able to find more music or artists to listen to of different genres based on the billboard with no cost.
+        </p>
+    </div></div> 
+        <br>
+
+        <!--Top Billboard Artists Section -->
+        <div class="container-artist">
+            <div id = "top-artists">
+                <br>
+        <h3 class="artist-header"> Top Billboard Artists of 2021 </h3>
+        <br>
+            <ol id="top-artist-list" class="center-list">
+                <div class="center-images-top-artist">
+                <li><img src="https://s3.us-west-1.amazonaws.com/cdn.ericchurch.com/uploads/news/2YOTsct5gnyqtmaSyPDkyGOsB0XqBHE84VlBHy9c.png"><br/>Eric Church</li>
+                <li><img src="https://i.pinimg.com/originals/0f/51/42/0f51423f4c405b8b3a78d667079b41e2.png"><br/>Taylor Swift </li>
+                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHwLpywZcmMFEfrjhYkoDcMU6Dwb9RYIvkFQ&usqp=CAU"><br/>Greta Van Fleet </li>
+                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUa07a48CwVZTKdyYLDSIpSQlNyl5lm4hO9A&usqp=CAU"><br/>Justin Bieber </li>
+                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAyb3k_5jvZsFNxOtbrCpYwgIBpf9oI3l6Cg&usqp=CAU"><br/>The Weeknd </li>
+                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSspbQMlShONlrGosHviuXQ3Z9zLy2_X0Omdw&usqp=CAU"><br/>Drake </li>
+                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOxVGYldW9h9hjdcKeapNSuziuJKyQgk34lQ&usqp=CAU"><br/>Ariana Grande </li>
+                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Bmww3vM5O5aJQWYravu_iIY2fTJhMoIwOg&usqp=CAU"><br/>Luke Combs </li>
+                <li><img src="https://image.pngaaa.com/193/482193-middle.png"><br/>Young Thug </li>
+                <li><img src="https://miro.medium.com/max/1128/1*VqrczHeicl8LOVplSbyMaA.png"><br/>Lil Baby</li>
+              </ol></div></div>
+
+              <!--Top Song's-->
+              <div class="container-songs">
+            <div id = "top-songs">
+                <br>
+                <h3 class="top-songs-header">Top Billboard Songs of 2021 </h3>
+                <div class="top-songs-con">
+              <ol>
+                <li><img src="https://i.ytimg.com/vi/VPdzWmVQcSc/maxresdefault.jpg" id="icon">Rapstar - <em>Polo G </em> 
+                <audio id="rapStar">
+                    <source src="./media/rapstar.mp3" type="audio/mp3">
+                </audio>
+                <!--JavaScript for Music Player-->
+                <script>
+                    var rapStar = document.getElementById("rapStar");
+                    var icon = document.getElementById("icon");
+
+                    icon.onclick = function(){
+                        if(rapStar.paused){
+                            rapStar.play();
+                            icon.src="./media/pause.jpeg";
+                        }else{
+                            rapStar.pause();
+                            icon.src="./media/rsplay.jpeg";
+
+                        }
+                    }
+
+                </script></li>
+
+                <li><img src="https://media.pitchfork.com/photos/6046449f02674855a6d5b77f/1:1/w_500/Silk-Sonic.jpg" id="icon1">Leave The Door Open - <em>Silk Sonic (Bruno Mars & Anderson.Paak)</em>
+                <audio id="leaveTheDoor">
+                    <source src="./media/leavethedoor.mp3" type="audio/mp3">
+                </audio>
+            <!--JavaScript for Music Player-->
+            <script>
+                var leaveTheDoor = document.getElementById("leaveTheDoor");
+                var icon1 = document.getElementById("icon1");
+
+                icon1.onclick = function(){
+                    if(leaveTheDoor.paused){
+                        leaveTheDoor.play();
+                        icon1.src="./media/pause.jpeg";
+                        }else{
+                            leaveTheDoor.pause();
+                            icon1.src="./media/leaveplay.jpeg";
+                    }
+                }           
+            </script></li>
+                    
+  
+
+                <li><img src="https://thefader-res.cloudinary.com/private_images/c_limit,w_1024/c_crop,h_593,w_1114,x_0,y_12,f_auto,q_auto:eco/bieber-peaches-video_pl0bdx/bieber-peaches-video_pl0bdx.jpg" id="icon2">Peaches - <em>Justin Bieber Ft. Daniel Caesar & Giveon</em>
+                    <audio id="peaches">
+                        <source src="./media/peaches.mp3" type="audio/mp3">
+                    </audio>
+                <!--JavaScript for Music Player-->
+                <script>
+                    var peaches = document.getElementById("peaches");
+                    var icon2 = document.getElementById("icon2");
+    
+                    icon2.onclick = function(){
+                        if(peaches.paused){
+                            peaches.play();
+                            icon2.src="./media/pause.jpeg";
+                            }else{
+                                peaches.pause();
+                                icon2.src="./media/peachesplay.jpeg";
+                        }
+                    }           
+                </script></li>
+                    
+                
+                <li><img src="https://www.gaytimes.co.uk/wp-content/uploads/2021/03/Lil-Nas-X-590x370.jpg" id="icon3">Montero (Call Me By Your Name) - <em>Lil Nas X</em>
+                    <audio id="montero">
+                        <source src="./media/montero.mp3" type="audio/mp3">
+                    </audio>
+                <!--JavaScript for Music Player-->
+                <script>
+                    var montero = document.getElementById("montero");
+                    var icon3 = document.getElementById("icon3");
+    
+                    icon3.onclick = function(){
+                        if(montero.paused){
+                            montero.play();
+                            icon3.src="./media/pause.jpeg";
+                            }else{
+                                montero.pause();
+                                icon3.src="./media/monteroplay.jpeg";
+                        }
+                    }           
+                </script></li>
+                  
+
+                <li><img src="https://upload.wikimedia.org/wikipedia/en/3/3d/Dua_Lipa_Levitating_%28DaBaby_Remix%29.png" id="icon4">Levitating - <em>Dua Lipa Ft. DaBaby</em>
+                    <audio id="levitating">
+                        <source src="./media/levitating.mp3" type="audio/mp3">
+                    </audio>
+                <!--JavaScript for Music Player-->
+                <script>
+                    var levitating = document.getElementById("levitating");
+                    var icon4 = document.getElementById("icon4");
+    
+                    icon4.onclick = function(){
+                        if(levitating.paused){
+                            levitating.play();
+                            icon4.src="./media/pause.jpeg";
+                            }else{
+                                levitating.pause();
+                                icon4.src="./media/levitatingplay.png";
+                        }
+                    }           
+                </script></li>
+                    
+
+                <li><img src="https://e.snmc.io/i/600/s/d4aba188e1529cdc955d411aa7e1cb16/8757626" id="icon5">Save Your Tears - <em>The Weeknd</em>
+                    <audio id="save">
+                        <source src="./media/save.mp3" type="audio/mp3">
+                    </audio>
+                <!--JavaScript for Music Player-->
+                <script>
+                    var save = document.getElementById("save");
+                    var icon5 = document.getElementById("icon5");
+    
+                    icon5.onclick = function(){
+                        if(save.paused){
+                            save.play();
+                            icon5.src="./media/pause.jpeg";
+                            }else{
+                                save.pause();
+                                icon5.src="./media/saveplay.jpeg";
+                        }
+                    }           
+                </script></li>
+                    
+
+                <li><img src="https://i1.sndcdn.com/artworks-cJNNzOVvLWF5ycyy-3HfesA-t500x500.jpg" id="icon6">Astronoaut In The Ocean - <em>Masked Wolf</em>
+                    <audio id="astronoaut">
+                        <source src="./media/astronaut.mp3" type="audio/mp3">
+                    </audio>
+                <!--JavaScript for Music Player-->
+                <script>
+                    var astronoaut = document.getElementById("astronoaut");
+                    var icon6 = document.getElementById("icon6");
+    
+                    icon6.onclick = function(){
+                        if(astronoaut.paused){
+                            astronoaut.play();
+                            icon6.src="./media/pause.jpeg";
+                            }else{
+                                astronoaut.pause();
+                                icon6.src="./media/astronautplay.jpeg";
+                        }
+                    }           
+                </script></li>
+                   
+                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyM4Xmjv0ge-CO38aShq_wgpd2JkAjm3s4Vw&usqp=CAU" id="icon7">Kiss Me More - <em>Doja Cat Ft. SZA</em>
+                    <audio id="kissMe">
+                        <source src="./media/kissMe.mp3" type="audio/mp3">
+                    </audio>
+                <!--JavaScript for Music Player-->
+                <script>
+                    var kissMe = document.getElementById("kissMe");
+                    var icon7 = document.getElementById("icon7");
+    
+                    icon7.onclick = function(){
+                        if(kissMe.paused){
+                            kissMe.play();
+                            icon7.src="./media/pause.jpeg";
+                            }else{
+                                kissMe.pause();
+                                icon7.src="./media/kissmeplay.jpeg";
+                        }
+                    }           
+                </script></li>
+                
+                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPAa0SWsSNqaDhOZ2qH_udvuw_tmN7sKtnTg&usqp=CAU" id="icon8">Up - <em>Cardi B</em>
+                    <audio id="up">
+                        <source src="./media/up.mp3" type="audio/mp3">
+                    </audio>
+                <!--JavaScript for Music Player-->
+                <script>
+                    var up = document.getElementById("up");
+                    var icon8 = document.getElementById("icon8");
+    
+                    icon8.onclick = function(){
+                        if(up.paused){
+                            up.play();
+                            icon8.src="./media/pause.jpeg";
+                            }else{
+                                up.pause();
+                                icon8.src="./media/upplay.jpeg";
+                        }
+                    }           
+                </script></li>
+                 
+                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStoMSnj9oCXeAi8exfPecmor9DKs3veuFQ9A&usqp=CAU" id="icon9" class="">Drivers License - <em>Olivia Rodrigo</em>
+                    <audio id="driverLicense">
+                        <source src="./media/driversLicense.mp3" type="audio/mp3">
+                    </audio>
+                <!--JavaScript for Music Player-->
+                <script>
+                    var driverLicense = document.getElementById("driverLicense");
+                    var icon9 = document.getElementById("icon9");
+    
+                    icon9.onclick = function(){
+                        if(driverLicense.paused){
+                            driverLicense.play();
+                            icon9.src="./media/pause.jpeg";
+                            }else{
+                                driverLicense.pause();
+                                icon9.src="./media/driverplay.jpeg";
+                        }
+                    }           
+                </script></li></div></div>
+
+            </div>
+              <br>
+              <div class="container-genres">
+              <div id="genres">
+                  <br>
+
+        <!--Genres Section -->
+        <h3 class="genres-header"> Top 5 Genres </h3>
+        <ul class="gener-color">
+            <li> <a href = "Pop_charts.html"> Pop </a> </li>
+            <li> <a href = "Rap_charts.html"> Rap/Hip-Hop </a> </li>
+            <li> <a href = "Rock_charts.html"> Rock </a> </li>
+            <li> <a href = "EDM_charts.html"> EDM/Dance </a> </li>
+            <li> <a href = "Latin_charts.html"> Latin </a> </li>
+        </ul></div></div>
+        
+    </body>
 </html>
